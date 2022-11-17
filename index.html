@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- 
         I / phân tích 
         1. header 
@@ -22,12 +23,13 @@
         III/ Xây dựng từng phần theo phân tích 
         IV / Hoàn thiện 
      -->
+
 </head>
 <body>
     <div id="main">
         <div id="header">
             <!-- Begin nav -->
-            <ul id="nav">
+            <ul id="nav">   
                 <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
@@ -44,13 +46,16 @@
                 </li>
             </ul>
             <!-- End nav -->
-
+            
             <!-- Begin : Search button -->
-
-            <!-- End : Search button -->
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            <!-- End : Search button -->
 
         </div>
 
@@ -72,17 +77,17 @@
                 </p>
 
                 <div class="row member-list">
-                    <div class="col col-3 text-center">
+                    <div class=" col col-3 s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/W3-images-team-.jpg" alt="Name" class="member-img">
                     </div>
 
-                    <div class="col col-3 text-center">
+                    <div class=" col col-3 s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/W3-images-team-.jpg" alt="Name" class="member-img">
                     </div>
 
-                    <div class="col col-3 text-center">
+                    <div class=" col col-3 s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/W3-images-team-.jpg" alt="Name" class="member-img">
                     </div>
@@ -105,37 +110,37 @@
 
                     <!-- places -->
                     <div class="row places-list">
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-full mt-16">
                             <img src="./assets/img/place-1.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-dsc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn">Buy Tickets</button>
+                                <button href="" class=" btn s-full-width js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-full mt-16">
                             <img src="./assets/img/place-2.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-dsc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn">Buy Tickets</button>
+                                <button href="" class=" btn s-full-width js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-full mt-16">
                             <img src="./assets/img/place-3.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
-                                <h3 class="place-heading">San Francisco</h3>
+                                <h3 class="place-heading">Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-dsc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn">Buy Tickets</button>
+                                <button href="" class=" btn s-full-width js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
                         <div class="clear"></div>
-            </div>
+                </div>
             </div>
         </div>
         <!-- Begin : Contact Section -->
@@ -144,27 +149,27 @@
             <p class="section-sub-heading">Fan? Drop a note!</p>
 
             <div class="row contact-content">
-                    <div class="col col-2 contact-info">
+                    <div class="col col-2 s-col-full contact-info">
                         <p><i class="ti-location-pin">Chicago,US</i></p>
                         <p><i class="ti-mobile">Phone:+00151515</i></p>
                         <p><i class="ti-email">Email:mail@mail.com</i></p>
                     </div>
-                    <div class="col col-2">
+                    <div class="col col-2 s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-2 contact-form">
+                                <div class="col col-2 s-col-full">
                                     <input type="text" name="" placeholder="Name" required id=""class="form-control">
                                 </div>
-                                <div class="col col-2 contact-form">
+                                <div class="col col-2 s-col-full s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
 
                             <div class="row mt-8">
-                                <div class="col col-full contact-form">
+                                <div class="col col-full ">
                                     <input type="email" name="" placeholder="Massege" required id="" class="form-control">
 
-                                    <input class=" btn pull-right mt-16" type="submit" value="SEND">
+                                    <input class=" btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                                 </div>
                             </div>
                         </form>
@@ -234,7 +239,7 @@
         // hàm hiển thị modal mua vé ( thêm class open vào modal )
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
-        const modalClose = document.querySelector ('.js-modal-close')
+        const modalClose = document.querySelector('.js-modal-close')
 
         function showBuyTicket() {
             modal.classList.add('open')
@@ -245,13 +250,52 @@
         }
 
         // lặp qua từng thẻ button và nghe hành vi click
+
         for ( const buyBtn of buyBtns ) {
-            buyBtn.addEventListener('click', showBuyTicket)
+            buyBtn.addEventListener('click',showBuyTicket)
         }
 
         // nghe hành vi click vào button close
-        modalClose.addEventListener('click',hideBuyTicket)
+            modalClose.addEventListener('click',hideBuyTicket)
+
     </script>
+
+    <script>
+        var header = document.getElementById('header');
+        var menuMobile = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight ;
+        // Đóng/Mở Mobile menu
+        menuMobile.onclick = function() {
+            var isClose = header.clientHeight === headerHeight ;
+            if (isClose) {
+                header.style.height = 'auto' ;
+            } 
+            else {
+                header.style.height = null ;
+            }
+        }
+
+        //auto close when click menu 
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]') ;
+            for (var i = 0 ;  i<menuItems.length ; i++) {
+                var menuItem = menuItems[i];
+                
+                menuItem.onclick = function(event) {
+                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                    if (isParentMenu) {
+                        event.preventDefault();
+                    } else {
+                        header.style.height = null ;
+                    }
+                }
+            }
+
+
+
+
+
+</script>
 
 </body>
 </html>
